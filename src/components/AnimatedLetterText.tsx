@@ -52,7 +52,7 @@ export default function AnimatedLetterText({ text }: AnimatedLetterTextProps) {
             y: -8,
           }}
           transition={{ type: 'spring' as const, stiffness: 400, damping: 10 }}
-          className="mx-1 text-7xl md:text-9xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent cursor-pointer transition-all duration-300 select-none"
+          className="mx-1 text-7xl md:text-9xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-primary cursor-pointer transition-all duration-300 select-none"
           style={{
             WebkitTextStroke: '1px rgba(255, 255, 255, 0.05)',
           }}

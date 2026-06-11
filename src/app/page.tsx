@@ -6,6 +6,7 @@ import About from '@/components/About';
 import Skills from '@/components/Skills';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
+import GithubRegistry from '@/components/GithubRegistry';
 import Education from '@/components/Education';
 import Contact from '@/components/Contact';
 import { Github, Linkedin, Mail } from 'lucide-react';
@@ -26,6 +27,7 @@ export default function Home() {
         <Skills />
         <Experience />
         <Projects />
+        <GithubRegistry />
         <Education />
         <Contact />
       </main>

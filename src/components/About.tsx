@@ -8,7 +8,7 @@ const BIO_HIGHLIGHTS = [
   { icon: BookOpen, label: 'BCA Graduate', detail: 'Yenepoya University' },
   { icon: Award, label: 'CGPA 8.7 Achievement', detail: 'Academic Distinction' },
   { icon: Briefcase, label: 'Data Analyst Intern', detail: 'Codelab Systems' },
-  { icon: Database, label: 'SQL Specialist', detail: 'Advanced Database Queries' },
+  { icon: Database, label: 'SQL – Intermediate', detail: 'Database Queries' },
 ];
 
 const STATS = [

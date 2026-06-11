@@ -7,7 +7,7 @@ import { Calendar, Briefcase, CheckCircle2 } from 'lucide-react';
 const ACHIEVEMENTS = [
   'Analyzed complex datasets using Python to extract valuable performance metrics.',
   'Reduced manual reporting timeline by 30% through visual model standardization.',
-  'Built 3+ dynamic Power BI dashboards for direct business stakeholder updates.',
+  'Built dynamic Power BI dashboards for direct business stakeholder updates.',
   'Managed SQL databases by verifying index values and querying transactional tables.',
   'Cleaned and validated 10,000+ data records using Power Query features.',
 ];

@@ -32,7 +32,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: 'Bank Customer Churn SQL Analysis',
-    description: 'Customer churn analysis using advanced SQL queries to identify retention patterns, risk factors, and actionable business retention recommendations.',
+    description: 'Customer churn analysis using intermediate SQL queries to identify retention patterns, risk factors, and actionable business retention recommendations.',
     tools: ['SQL Server', 'SSMS'],
     demoUrl: 'https://github.com/Afran-dataviz/Bank-Customer-Churn-SQL-Analysis',
     githubUrl: 'https://github.com/Afran-dataviz/Bank-Customer-Churn-SQL-Analysis',
