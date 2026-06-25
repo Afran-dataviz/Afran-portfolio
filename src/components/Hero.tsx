@@ -115,7 +115,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="max-w-2xl text-base md:text-lg text-gray-400 leading-relaxed font-light mb-10 px-4 drop-shadow-[0_2px_8px_rgba(5,8,22,0.9)]"
         >
-          Transforming complex data into meaningful business insights through Power BI, SQL, Python, Excel, and Business Intelligence solutions.
+          Technical Specialist and Data Analyst specializing in SQL databases, Python automation, and software troubleshooting to solve complex technical challenges and support users.
         </motion.p>
 
         {/* Action Buttons */}

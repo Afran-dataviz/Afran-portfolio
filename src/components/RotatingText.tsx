@@ -4,8 +4,9 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ROLES = [
+  'Technical Specialist',
   'Data Analyst',
-  'Business Intelligence Analyst',
+  'Software Support Specialist',
   'Power BI Developer',
   'Python Developer',
 ];

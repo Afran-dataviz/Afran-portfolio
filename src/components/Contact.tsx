@@ -15,15 +15,15 @@ const CONTACT_INFO = [
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/a-afran-b88968259',
-    href: 'https://www.linkedin.com/in/a-afran-b88968259',
+    value: 'linkedin.com/in/abdulafran',
+    href: 'https://www.linkedin.com/in/abdulafran',
     color: '#6C63FF',
   },
   {
     icon: Github,
     label: 'GitHub',
-    value: 'github.com/Afran-dataviz',
-    href: 'https://github.com/Afran-dataviz',
+    value: 'github.com/abdulafran',
+    href: 'https://github.com/abdulafran',
     color: '#8A2BE2',
   },
   {

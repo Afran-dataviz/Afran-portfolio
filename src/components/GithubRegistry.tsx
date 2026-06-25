@@ -34,7 +34,7 @@ const FALLBACK_REPOS: GithubRepo[] = [
     language: 'Python',
     stargazers_count: 12,
     forks_count: 4,
-    html_url: 'https://github.com/Afran-dataviz'
+    html_url: 'https://github.com/abdulafran'
   },
   {
     name: 'database-query-tuning',
@@ -42,7 +42,7 @@ const FALLBACK_REPOS: GithubRepo[] = [
     language: 'SQL',
     stargazers_count: 8,
     forks_count: 3,
-    html_url: 'https://github.com/Afran-dataviz'
+    html_url: 'https://github.com/abdulafran'
   },
   {
     name: 'n8n-llm-workflow-automation',
@@ -50,7 +50,7 @@ const FALLBACK_REPOS: GithubRepo[] = [
     language: 'JavaScript',
     stargazers_count: 15,
     forks_count: 6,
-    html_url: 'https://github.com/Afran-dataviz'
+    html_url: 'https://github.com/abdulafran'
   },
   {
     name: 'powerbi-kpi-dashboards',
@@ -58,7 +58,7 @@ const FALLBACK_REPOS: GithubRepo[] = [
     language: 'PowerBI',
     stargazers_count: 18,
     forks_count: 5,
-    html_url: 'https://github.com/Afran-dataviz'
+    html_url: 'https://github.com/abdulafran'
   }
 ];
 
@@ -97,13 +97,13 @@ export default function GithubRegistry() {
     const fetchGitHubData = async () => {
       try {
         // Fetch profile
-        const profileRes = await fetch('https://api.github.com/users/Afran-dataviz');
+        const profileRes = await fetch('https://api.github.com/users/abdulafran');
         if (profileRes.ok) {
           const profileData = await profileRes.json();
           setProfile({
             name: profileData.name || 'A Afran',
             avatar_url: profileData.avatar_url,
-            bio: profileData.bio || 'Data Analyst & Business Intelligence Specialist',
+            bio: profileData.bio || 'Technical Specialist & Data Analyst',
             public_repos: profileData.public_repos,
             followers: profileData.followers,
             following: profileData.following,
@@ -112,7 +112,7 @@ export default function GithubRegistry() {
         }
 
         // Fetch repos
-        const reposRes = await fetch('https://api.github.com/users/Afran-dataviz/repos?sort=updated&per_page=6');
+        const reposRes = await fetch('https://api.github.com/users/abdulafran/repos?sort=updated&per_page=6');
         if (reposRes.ok) {
           const reposData = await reposRes.json();
           if (Array.isArray(reposData) && reposData.length > 0) {
@@ -202,7 +202,7 @@ export default function GithubRegistry() {
                   {profile?.name || 'A Afran'}
                 </h3>
                 <p className="text-xs text-gray-500 font-mono tracking-wider mt-0.5">
-                  @Afran-dataviz
+                  @abdulafran
                 </p>
               </div>
             </div>
@@ -233,7 +233,7 @@ export default function GithubRegistry() {
             </div>
 
             <a
-              href="https://github.com/Afran-dataviz"
+              href="https://github.com/abdulafran"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-2.5 rounded-xl border border-primary/25 bg-primary/5 hover:bg-primary/10 text-primary text-xs font-semibold flex items-center justify-center gap-1.5 transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(0,229,255,0.25)]"

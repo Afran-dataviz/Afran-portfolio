@@ -5,11 +5,11 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import { Calendar, Briefcase, CheckCircle2 } from 'lucide-react';
 
 const ACHIEVEMENTS = [
-  'Analyzed complex datasets using Python to extract valuable performance metrics.',
-  'Reduced manual reporting timeline by 30% through visual model standardization.',
-  'Built dynamic Power BI dashboards for direct business stakeholder updates.',
-  'Managed SQL databases by verifying index values and querying transactional tables.',
-  'Cleaned and validated 10,000+ data records using Power Query features.',
+  'Analyzed complex datasets using Python (Pandas, NumPy) to uncover business trends, reducing manual reporting time by ~30%.',
+  'Managed and queried relational databases using Microsoft SQL Server (SSMS), writing optimized SQL queries to support business reporting and data analysis.',
+  'Developed interactive Power BI dashboards to visualize KPIs and support data-driven decision-making.',
+  'Assisted in validating and troubleshooting data-related issues across reporting systems.',
+  'Extracted, validated and cleaned datasets of 10,000+ records, identifying and resolving data inconsistencies to ensure quality and accurate reporting.',
 ];
 
 export default function Experience() {
@@ -89,11 +89,14 @@ export default function Experience() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-wide">
                 <Calendar className="w-3.5 h-3.5" />
-                <span>Oct 2025 – Mar 2026</span>
+                <span>Oct 2025 – Mar 2026 (6 Months)</span>
               </div>
               <h3 className="text-xl md:text-2xl font-extrabold text-white mt-2">Data Analyst Intern</h3>
               <span className="text-sm font-semibold tracking-wider text-secondary uppercase">
                 Codelab Systems
+              </span>
+              <span className="text-xs text-gray-500 font-medium">
+                Mangalore, Karnataka
               </span>
             </motion.div>
 

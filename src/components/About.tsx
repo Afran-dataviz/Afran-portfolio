@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Award, BookOpen, Database, Briefcase } from 'lucide-react';
 
 const BIO_HIGHLIGHTS = [
-  { icon: BookOpen, label: 'BCA Graduate', detail: 'Yenepoya University' },
+  { icon: BookOpen, label: 'BCA Graduate', detail: 'Yenepoya' },
   { icon: Award, label: 'CGPA 8.7 Achievement', detail: 'Academic Distinction' },
   { icon: Briefcase, label: 'Data Analyst Intern', detail: 'Codelab Systems' },
   { icon: Database, label: 'SQL – Intermediate', detail: 'Database Queries' },
@@ -80,12 +80,12 @@ export default function About() {
               variants={itemVariants}
               className="text-xl md:text-2xl font-bold text-white tracking-wide leading-snug"
             >
-              Solving complex business challenges through the power of{' '}
-              <span className="text-primary font-extrabold">Data Analytics</span> and visual intelligence.
+              Solving complex technical challenges through database management, systems troubleshooting, and{' '}
+              <span className="text-primary font-extrabold">Software Support</span>.
             </motion.h3>
 
             <motion.p variants={itemVariants} className="text-base text-gray-400">
-              I am a detail-oriented Data Analyst and Power BI Developer specializing in gathering messy datasets, restructuring pipelines, and building interactive storytelling dashboards. I bridge the gap between complex databases and strategic business decisions.
+              BCA graduate with hands-on experience in SQL, Microsoft SQL Server, Python, Power BI, and software troubleshooting gained through a 6-month internship and multiple technical projects. Strong analytical and problem-solving skills with the ability to diagnose issues, manage databases, and support software users. Eager to contribute technical, analytical, and troubleshooting skills in software support, database management, and customer-focused technology environments.
             </motion.p>
 
             {/* Interactive Timeline Info/Credentials List */}

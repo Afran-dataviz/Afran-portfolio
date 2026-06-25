@@ -51,7 +51,7 @@ export default function Home() {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/Afran-dataviz"
+              href="https://github.com/abdulafran"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-full bg-white/5 border border-white/5 hover:border-primary/30 text-gray-400 hover:text-primary transition-all duration-300 shadow-sm"
@@ -60,7 +60,7 @@ export default function Home() {
               <Github className="w-4 h-4" />
             </a>
             <a
-              href="https://www.linkedin.com/in/a-afran-b88968259"
+              href="https://www.linkedin.com/in/abdulafran"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-full bg-white/5 border border-white/5 hover:border-secondary/30 text-gray-400 hover:text-secondary transition-all duration-300 shadow-sm"

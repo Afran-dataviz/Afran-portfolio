@@ -6,7 +6,8 @@ import {
   Database, BarChart3, FileSpreadsheet, Code, Cpu, Activity,
   Terminal, LineChart, TrendingUp, GitMerge, Sparkles, Brain, 
   Bot, Workflow, Link2, Filter, Zap, Search, CheckCircle2, 
-  ClipboardList, Grid, Table, Sigma, Code2
+  ClipboardList, Grid, Table, Sigma, Code2, Wrench, HeartHandshake,
+  MessageSquare, Settings
 } from 'lucide-react';
 
 interface SkillSector {
@@ -105,19 +106,31 @@ const SKILL_SECTORS: SkillSector[] = [
     icon: Cpu,
     color: '#EC4899',
     glowClass: 'rgba(236, 72, 153, 0.15)',
-    description: 'Multi-LLM APIs orchestration, prompt engineering, agentic development, and automated n8n workflows.',
+    description: 'Multi-LLM APIs orchestration, prompt engineering, agentic development, MCP configuration, and automated n8n workflows.',
     skills: [
-      'Gemini API',
-      'Grok API',
-      'Claude AI',
-      'AI Workflow Automation',
-      'API Integration',
       'Prompt Engineering',
-      'AI Agent',
-      'Multi-LLM Integration',
-      'AI-Assisted Coding',
-      'Automation Solutions Development',
-      'n8n automation workflow'
+      'ChatGPT',
+      'Claude AI',
+      'Antigravity AI-Assisted Development',
+      'AI Workflow Design',
+      'MCP (Model Context Protocol)',
+      'AI Agent Configuration',
+      'Automation Design'
+    ]
+  },
+  {
+    id: 'support_troubleshooting',
+    secCode: 'SEC-07',
+    title: 'Support & Troubleshooting',
+    icon: Wrench,
+    color: '#EF4444',
+    glowClass: 'rgba(239, 68, 68, 0.15)',
+    description: 'Diagnosing technical anomalies, database verification, user support, QA validation, and software troubleshooting.',
+    skills: [
+      'Technical Troubleshooting',
+      'Customer Support',
+      'Software Testing',
+      'Communication Skills'
     ]
   }
 ];
@@ -164,17 +177,20 @@ const SKILL_ICONS: Record<string, React.ElementType> = {
   'Data Reporting': ClipboardList,
 
   // AI & Automation
-  'Gemini API': Sparkles,
-  'Grok API': Zap,
-  'Claude AI': Bot,
-  'AI Workflow Automation': Workflow,
-  'API Integration': Link2,
   'Prompt Engineering': Brain,
-  'AI Agent': Bot,
-  'Multi-LLM Integration': Cpu,
-  'AI-Assisted Coding': Code,
-  'Automation Solutions Development': Cpu,
-  'n8n automation workflow': Workflow,
+  'ChatGPT': Sparkles,
+  'Claude AI': Bot,
+  'Antigravity AI-Assisted Development': Cpu,
+  'AI Workflow Design': Workflow,
+  'MCP (Model Context Protocol)': Link2,
+  'AI Agent Configuration': Bot,
+  'Automation Design': Workflow,
+
+  // Support & Troubleshooting
+  'Technical Troubleshooting': Wrench,
+  'Customer Support': HeartHandshake,
+  'Software Testing': CheckCircle2,
+  'Communication Skills': MessageSquare,
 };
 
 export default function Skills() {

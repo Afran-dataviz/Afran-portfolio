@@ -13,50 +13,54 @@ interface Project {
   previewType: 'netflix' | 'uber' | 'churn' | 'datalens';
   featured?: boolean;
   bullets?: string[];
+  date?: string;
 }
 
 const PROJECTS: Project[] = [
   {
-    title: 'DataLens – AI-Powered Data Analytics Platform',
+    title: 'DataLens – AI-Powered Data Analytics SaaS Platform',
     description: 'A SaaS-style AI-powered analytics platform enabling users to upload datasets, clean data, generate insights, and interact through natural language queries.',
-    tools: ['Next.js', 'TypeScript', 'Supabase', 'Groq AI', 'Stripe', 'n8n', 'Vercel'],
+    tools: ['Next.js', 'TypeScript', 'Supabase', 'Groq AI', 'Stripe', 'Vercel'],
     demoUrl: 'https://datalens-blond.vercel.app/',
-    githubUrl: 'https://github.com/Afran-dataviz/datalens.git',
+    githubUrl: 'https://github.com/abdulafran',
     previewType: 'datalens',
     featured: true,
+    date: 'Jun 2026',
     bullets: [
-      'Built and deployed a SaaS-style AI-powered analytics platform enabling users to upload datasets, clean data, generate insights, and interact through natural language queries.',
-      'Integrated Groq AI for conversational analytics and automated insight generation.',
-      'Implemented secure user authentication and database management using Supabase.',
-      'Developed Stripe subscription payments, customer billing portal, and webhook-based subscription management.',
-      'Created an admin telemetry dashboard for monitoring users, datasets, platform activity, and recurring revenue metrics.',
-      'Designed responsive user interfaces optimized for desktop and mobile devices.',
-      'Deployed the application on Vercel using modern AI-assisted development workflows and production-ready architecture.'
+      'Built and deployed an AI-powered data analytics platform for uploading, cleaning, and analyzing datasets.',
+      'Integrated Groq AI to enable users to interact with data using natural language queries and generate insights.',
+      'Implemented secure authentication, database management, and user account features using Supabase.',
+      'Developed subscription-based payment functionality using Stripe, including billing management and webhook integration.'
     ],
   },
   {
-    title: 'Netflix Data Analysis Dashboard',
-    description: 'Interactive dashboard analyzing trends, genres, ratings, and yearly release patterns across Netflix content. It provides structured breakdowns of content growth patterns.',
-    tools: ['Power BI', 'Excel', 'Power Query'],
-    demoUrl: 'https://github.com/Afran-dataviz/netflix-excel-dashboard',
-    githubUrl: 'https://github.com/Afran-dataviz/netflix-excel-dashboard',
-    previewType: 'netflix',
-  },
-  {
     title: 'Uber Data Analytics Dashboard',
-    description: 'Analysis of 100,000+ trip records to uncover revenue trends, booking patterns, ride distributions, and customer behavioral metrics across distinct dates and areas.',
+    description: 'Analysis of 100,000+ Uber trip records to identify revenue, booking, and ride performance trends.',
     tools: ['SQL', 'Python', 'Power BI'],
-    demoUrl: 'https://github.com/Afran-dataviz/uber-powerbi-dashboard',
-    githubUrl: 'https://github.com/Afran-dataviz/uber-powerbi-dashboard',
+    demoUrl: 'https://github.com/abdulafran',
+    githubUrl: 'https://github.com/abdulafran',
     previewType: 'uber',
+    date: 'Jan 2026',
+    bullets: [
+      'Analyzed 100,000+ Uber trip records to identify revenue, booking, and ride performance trends.',
+      'Calculated key business KPIs such as Total Revenue, Total Trips, Average Rating, and Cancellation Rate using SQL aggregate functions.',
+      'Developed interactive Power BI dashboards with dynamic charts and slicers for drill-down analysis by city and time period.',
+      'Identified top cancellation reasons and peak demand hours, providing actionable operational insights.'
+    ],
   },
   {
-    title: 'Bank Customer Churn SQL Analysis',
-    description: 'Customer churn analysis using intermediate SQL queries to identify retention patterns, risk factors, and actionable business retention recommendations.',
-    tools: ['SQL Server', 'SSMS'],
-    demoUrl: 'https://github.com/Afran-dataviz/Bank-Customer-Churn-SQL-Analysis',
-    githubUrl: 'https://github.com/Afran-dataviz/Bank-Customer-Churn-SQL-Analysis',
+    title: 'SQL Server Customer Analytics & Churn Analysis',
+    description: 'Performed customer churn analysis on 5,000+ banking records using SQL Server and SSMS.',
+    tools: ['SQL Server (SSMS)'],
+    demoUrl: 'https://github.com/abdulafran',
+    githubUrl: 'https://github.com/abdulafran',
     previewType: 'churn',
+    date: 'Mar 2026',
+    bullets: [
+      'Performed customer churn analysis on 5,000+ banking records using SQL Server and SSMS.',
+      'Applied subqueries, aggregate functions, filtering, and sorting techniques to segment churned and retained customers.',
+      'Analyzed customer demographics, account balance, geography, and credit score patterns to identify churn trends.'
+    ],
   },
 ];
 
@@ -319,15 +323,22 @@ function ProjectCard({ project }: { project: Project }) {
       {/* Details */}
       <div className="p-6 flex flex-col flex-grow justify-between gap-4">
         <div className="flex flex-col gap-2.5">
-          <div className="flex flex-wrap gap-1.5">
-            {project.tools.map((tag) => (
-              <span
-                key={tag}
-                className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-gray-300"
-              >
-                {tag}
+          <div className="flex items-center justify-between flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5">
+              {project.tools.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-gray-300"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            {project.date && (
+              <span className="text-[10px] font-semibold text-gray-500 font-mono">
+                {project.date}
               </span>
-            ))}
+            )}
           </div>
 
           <h3 className="text-xl font-extrabold text-white group-hover:text-primary transition-colors duration-300">
@@ -337,6 +348,17 @@ function ProjectCard({ project }: { project: Project }) {
           <p className="text-sm font-light text-gray-400 leading-relaxed">
             {project.description}
           </p>
+
+          {project.bullets && (
+            <ul className="text-[11px] font-light text-gray-400 leading-relaxed space-y-1.5 mt-2">
+              {project.bullets.map((bullet, index) => (
+                <li key={index} className="flex items-start gap-2 text-left">
+                  <span className="text-primary mt-0.5">✦</span>
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
 
         {/* Buttons */}
@@ -427,9 +449,16 @@ function FeaturedProjectCard({ project }: { project: Project }) {
                 </span>
               ))}
             </div>
-            <span className="text-[10px] font-bold tracking-widest text-[#C9A84C] bg-[#C9A84C]/10 px-2 py-0.5 rounded border border-[#C9A84C]/20 animate-pulse">
-              ★ FEATURED PROJECT
-            </span>
+            <div className="flex items-center gap-2">
+              {project.date && (
+                <span className="text-[10px] font-bold text-gray-500 font-mono bg-white/5 px-2 py-0.5 rounded border border-white/5">
+                  {project.date}
+                </span>
+              )}
+              <span className="text-[10px] font-bold tracking-widest text-[#C9A84C] bg-[#C9A84C]/10 px-2 py-0.5 rounded border border-[#C9A84C]/20 animate-pulse">
+                ★ FEATURED PROJECT
+              </span>
+            </div>
           </div>
 
           <h3 className="text-2xl md:text-3xl font-black text-white group-hover:text-[#C9A84C] transition-colors duration-300">

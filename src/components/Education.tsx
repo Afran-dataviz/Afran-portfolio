@@ -73,10 +73,10 @@ export default function Education() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
                 <div>
                   <h3 className="text-xl md:text-2xl font-black text-white group-hover:text-secondary transition-colors duration-300">
-                    Bachelor of Computer Applications
+                    Bachelor of Computer Science (BCA)
                   </h3>
                   <span className="text-sm font-semibold tracking-wider text-primary uppercase mt-1 block">
-                    Yenepoya University
+                    Yenepoya — Mangalore, Karnataka
                   </span>
                 </div>
                 <div className="flex flex-col sm:items-end gap-1.5 shrink-0">
@@ -86,7 +86,7 @@ export default function Education() {
                   </div>
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-semibold text-primary">
                     <Award className="w-3.5 h-3.5" />
-                    <span>CGPA 8.7 Achievement</span>
+                    <span>CGPA: 8.7 / 10</span>
                   </div>
                 </div>
               </div>
