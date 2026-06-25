@@ -34,7 +34,7 @@ const FALLBACK_REPOS: GithubRepo[] = [
     language: 'Python',
     stargazers_count: 12,
     forks_count: 4,
-    html_url: 'https://github.com/abdulafran'
+    html_url: 'https://github.com/Afran-dataviz'
   },
   {
     name: 'database-query-tuning',
@@ -42,7 +42,7 @@ const FALLBACK_REPOS: GithubRepo[] = [
     language: 'SQL',
     stargazers_count: 8,
     forks_count: 3,
-    html_url: 'https://github.com/abdulafran'
+    html_url: 'https://github.com/Afran-dataviz'
   },
   {
     name: 'n8n-llm-workflow-automation',
@@ -50,7 +50,7 @@ const FALLBACK_REPOS: GithubRepo[] = [
     language: 'JavaScript',
     stargazers_count: 15,
     forks_count: 6,
-    html_url: 'https://github.com/abdulafran'
+    html_url: 'https://github.com/Afran-dataviz'
   },
   {
     name: 'powerbi-kpi-dashboards',
@@ -58,7 +58,7 @@ const FALLBACK_REPOS: GithubRepo[] = [
     language: 'PowerBI',
     stargazers_count: 18,
     forks_count: 5,
-    html_url: 'https://github.com/abdulafran'
+    html_url: 'https://github.com/Afran-dataviz'
   }
 ];
 
@@ -97,7 +97,7 @@ export default function GithubRegistry() {
     const fetchGitHubData = async () => {
       try {
         // Fetch profile
-        const profileRes = await fetch('https://api.github.com/users/abdulafran');
+        const profileRes = await fetch('https://api.github.com/users/Afran-dataviz');
         if (profileRes.ok) {
           const profileData = await profileRes.json();
           setProfile({
@@ -112,7 +112,7 @@ export default function GithubRegistry() {
         }
 
         // Fetch repos
-        const reposRes = await fetch('https://api.github.com/users/abdulafran/repos?sort=updated&per_page=6');
+        const reposRes = await fetch('https://api.github.com/users/Afran-dataviz/repos?sort=updated&per_page=6');
         if (reposRes.ok) {
           const reposData = await reposRes.json();
           if (Array.isArray(reposData) && reposData.length > 0) {
@@ -182,7 +182,10 @@ export default function GithubRegistry() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch mb-12">
           
           {/* GitHub Profile Card (Left - 4 cols) */}
-          <div className="lg:col-span-4 glass-panel p-6 border border-white/5 bg-[#050816]/40 rounded-2xl flex flex-col justify-between relative overflow-hidden group">
+          <div 
+            onClick={() => window.open(profile?.html_url || 'https://github.com/Afran-dataviz', '_blank')}
+            className="lg:col-span-4 glass-panel p-6 border border-white/5 bg-[#050816]/40 rounded-2xl flex flex-col justify-between relative overflow-hidden group cursor-pointer hover:border-primary/30 transition-all duration-300"
+          >
             <div className="absolute inset-0 bg-grid-white/[0.01] pointer-events-none" />
             
             <div className="flex items-center gap-4">
@@ -202,7 +205,7 @@ export default function GithubRegistry() {
                   {profile?.name || 'A Afran'}
                 </h3>
                 <p className="text-xs text-gray-500 font-mono tracking-wider mt-0.5">
-                  @abdulafran
+                  @Afran-dataviz
                 </p>
               </div>
             </div>
@@ -232,16 +235,13 @@ export default function GithubRegistry() {
               </div>
             </div>
 
-            <a
-              href="https://github.com/abdulafran"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full py-2.5 rounded-xl border border-primary/25 bg-primary/5 hover:bg-primary/10 text-primary text-xs font-semibold flex items-center justify-center gap-1.5 transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(0,229,255,0.25)]"
+            <div
+              className="w-full py-2.5 rounded-xl border border-primary/25 bg-primary/5 hover:bg-primary/10 text-primary text-xs font-semibold flex items-center justify-center gap-1.5 transition-all duration-300 shadow-sm group-hover:shadow-[0_0_15px_rgba(0,229,255,0.25)]"
             >
               <Github className="w-4 h-4" />
               <span>Connect on GitHub</span>
               <ExternalLink className="w-3.5 h-3.5" />
-            </a>
+            </div>
           </div>
 
           {/* Activity Heatmap Grid (Right - 8 cols) */}
@@ -332,6 +332,7 @@ export default function GithubRegistry() {
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 whileHover={{ y: -5 }}
+                onClick={() => window.open(repo.html_url, '_blank')}
                 className="glass-panel p-6 border border-white/5 bg-[#050816]/30 relative overflow-hidden rounded-2xl cursor-pointer group transition-all duration-300 hover:border-secondary/35 hover:bg-slate-950/40 hover:shadow-[0_8px_25px_-8px_rgba(108,99,255,0.2)]"
               >
                 {/* Visual Backdrop Halo */}
@@ -349,15 +350,12 @@ export default function GithubRegistry() {
                       {repo.name}
                     </h4>
                   </div>
-                  <a
-                    href={repo.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-1.5 rounded-lg border border-white/5 bg-white/5 text-gray-500 hover:text-white hover:border-white/20 transition-all duration-300"
+                  <div
+                    className="p-1.5 rounded-lg border border-white/5 bg-white/5 text-gray-500 group-hover:text-white group-hover:border-white/20 transition-all duration-300"
                     title="View Repo"
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
+                  </div>
                 </div>
 
                 <p className="text-xs text-gray-400 font-light mt-3 leading-relaxed min-h-[48px]">

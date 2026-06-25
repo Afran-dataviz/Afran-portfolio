@@ -22,8 +22,8 @@ const CONTACT_INFO = [
   {
     icon: Github,
     label: 'GitHub',
-    value: 'github.com/abdulafran',
-    href: 'https://github.com/abdulafran',
+    value: 'github.com/Afran-dataviz',
+    href: 'https://github.com/Afran-dataviz',
     color: '#8A2BE2',
   },
   {
